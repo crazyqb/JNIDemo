@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+import com.example.qb.hardlibrary.*;
+
 public class MainActivity extends AppCompatActivity {
     private boolean ledon = false;
     private Button button = null;
@@ -18,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     class MyButtonListener implements View.OnClickListener{
         @Override
         public void onClick(View v) {
+            HardControl hardControl = new HardControl();
+
             ledon = !ledon;
             if (ledon){
                 button.setText("ALL OFF");
